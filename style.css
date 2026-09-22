@@ -1,0 +1,28 @@
+/* ========================================= */
+/* GLOBAL VARIABLES & STYLE GUIDE SIMAG-JKB  */
+/* ========================================= */
+:root {
+    /* 1. WARNA UTAMA (IDENTITAS) */
+    --biru-trpl: #0056b3;         /* Biru utama untuk Header, Navbar, Judul */
+    --biru-trpl-gelap: #004494;   /* Biru gelap untuk efek hover tombol */
+
+    --kuning-jkb: #FFC107;        /* Kuning utama untuk Tombol Aksi, Aksen, Label */
+    --kuning-jkb-gelap: #E0A800;  /* Kuning gelap untuk efek hover tombol */
+
+    /* 2. WARNA NETRAL (BACKGROUND & TEKS) */
+    --bg-dasar: #F8F9FA;          /* Abu-abu sangat terang untuk latar belakang section */
+    --bg-putih: #FFFFFF;          /* Putih bersih untuk Card atau kotak konten */
+    --teks-utama: #212529;        /* Hitam keabu-abuan untuk teks paragraf (lebih nyaman dibaca dari #000) */
+    --teks-pudar: #6C757D;        /* Abu-abu untuk teks sekunder/tanggal/lokasi */
+
+    /* 3. TIPOGRAFI */
+    --font-utama: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-utama);
+    color: var(--teks-utama);
+    background-color: var(--bg-dasar);
+    margin: 0;
+    padding: 0;
+}
