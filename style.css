@@ -231,3 +231,182 @@ body {
     color: var(--teks-pudar);
     line-height: 1.6
 }
+
+/*Katalog Section*/
+#preview-katalog {
+    background-color: var(--bg-dasar);
+    padding: 80px 0;
+}
+
+.katalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membagi menjadi 3 kolom */
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.katalog-card {
+    background-color: var(--bg-putih);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.katalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.badge-prodi {
+    display: inline-block;
+    background-color: var(--kuning-jkb);
+    color: var(--teks-utama);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.katalog-card h3 {
+    color: var(--biru-trpl);
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.perusahaan {
+    color: var(--teks-pudar);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.btn-sekunder-small {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid var(--biru-trpl);
+    color: var(--biru-trpl);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-sekunder-small:hover {
+    background-color: var(--biru-trpl);
+    color: #fff;
+}
+
+.mt-4 { margin-top: 40px; }
+
+/*Testimoni Section*/
+#testimoni {
+    background-color: var(--bg-putih);
+    padding: 80px 0;
+}
+
+.testimoni-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membagi menjadi 2 kolom lebar */
+    gap: 30px;
+}
+
+.testimoni-card {
+    background-color: var(--bg-dasar);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid var(--kuning-jkb); /* Garis aksen kuning di sisi kiri */
+}
+
+.rating {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.kutipan {
+    font-style: italic;
+    color: var(--teks-utama);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.nama-alumni {
+    color: var(--biru-trpl);
+    margin: 0;
+    font-weight: bold;
+}
+
+/*Footer*/
+#footer-utama {
+    background-color: var(--biru-trpl);
+    color: var(--bg-putih);
+    padding-top: 60px;
+    margin-top: 50px;
+}
+
+/* Menggunakan CSS Grid untuk membagi area footer */
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Kolom pertama lebih lebar untuk deskripsi logo */
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand h3 {
+    color: var(--kuning-jkb);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #d1e3f8; /* Warna biru sangat muda agar tidak terlalu redup */
+    line-height: 1.6;
+}
+
+.footer-links h4, .footer-contact h4 {
+    color: var(--kuning-jkb);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: #d1e3f8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--kuning-jkb);
+}
+
+.footer-contact p {
+    color: #d1e3f8;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* Area Copyright di bagian paling bawah */
+.footer-bottom {
+    background-color: var(--biru-trpl-gelap); /* Warna latar sedikit lebih gelap dari footer utama */
+    padding: 20px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #d1e3f8;
+    font-size: 0.9rem;
+}
