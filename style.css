@@ -183,7 +183,7 @@ body {
 /*About Style*/
 #about {
     background-color: var(--bg-dasar);
-    padding: 80px 0;
+    padding: 30px 0;
 }
 
 .text-center{
@@ -215,4 +215,19 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+.ikon-fitur{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.fitur-card h3{
+    color: var(--biru-trpl);
+    margin-bottom: 15px;
+}
+
+.fitur-card p{
+    color: var(--teks-pudar);
+    line-height: 1.6
 }
