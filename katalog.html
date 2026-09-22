@@ -3,32 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMAG JKB</title>
-    <!-- Link CSS Global -->
-    <link rel="stylesheet" href="global.css">
-    <!-- Link CSS Khusus Halaman (Nanti diubah oleh masing-masing) -->
+    <title>Katalog Magang - SIMAG JKB</title>
+    <!-- CSS Utama dari Adit -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS Khusus Halaman Katalog Memanjang -->
     <link rel="stylesheet" href="style-katalog.css">
 </head>
 <body>
-<!-- TEMPAT HEADER (Tunggu Adit Selesai Nanti) -->
+
+<!-- HEADER PERSIS SESUAI INDEX.HTML -->
 <header id="header-utama">
     <div class="container">
-        <h2 class="logo" style="color: var(--biru-trpl);">SIMAG-JKB</h2>
+        <h2 class="logo">SIMAG-JKB</h2>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html" class="active">Katalog Magang</a></li>
+                <li><a href="ulasan.html">Form Ulasan</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<!-- KONTEN UTAMA HALAMAN MASING-MASING -->
-<main>
+<!-- KONTEN UTAMA KATALOG -->
+<main id="katalog-section">
     <div class="container">
-        <!-- Teman-teman, mulai ngoding konten kalian di sini! -->
+        
+        <!-- Header Judul & Filter Bar -->
+        <section class="katalog-head">
+            <h1 class="section-title">Katalog Lowongan Magang</h1>
+            <p class="section-subtitle">Pilih lowongan industri mitra TRPL & JKB yang sesuai dengan keahlianmu.</p>
+            
+            <form class="filter-bar" action="#" method="GET">
+                <input type="text" name="keyword" placeholder="Cari posisi atau nama instansi/perusahaan..." class="input-search">
+                <select name="kategori" class="select-filter">
+                    <option value="">Semua Divisi</option>
+                    <option value="software">Software Engineering</option>
+                    <option value="network">Jaringan & Keamanan Sistem</option>
+                    <option value="data">Basis Data & AI</option>
+                    <option value="multimedia">Desain & Multimedia</option>
+                </select>
+                <select name="tipe" class="select-filter">
+                    <option value="">Semua Sistem Kerja</option>
+                    <option value="wfo">On-site (WFO)</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="wfh">Remote (WFH)</option>
+                </select>
+                <button type="submit" class="btn-utama">Cari Lowongan</button>
+            </form>
+        </section>
+
+        <!-- Daftar Kartu Lowongan Memanjang ke Samping -->
+        <section class="katalog-list-horizontal">
+            
+            <!-- Kartu 1 -->
+            <article class="job-card-row">
+                <div class="card-logo">
+                    <div class="logo-box">PT</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="job-title"><a href="detail-lowongan.html?id=1">Fullstack Web Developer Intern</a></h3>
+                    <p class="company-name">PT Solusi Teknologi Terpadu</p>
+                    <p class="job-desc">Membantu perancangan modul sistem informasi internal, integrasi REST API, dan pemeliharaan basis data MySQL.</p>
+                    <div class="job-meta-tags">
+                        <span class="meta-tag">📍 Cilacap (Hybrid)</span>
+                        <span class="meta-tag">⏱️ 6 Bulan</span>
+                        <span class="meta-tag">💼 Software Engineering</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span class="status-badge badge-open">Pendaftaran Dibuka</span>
+                    <span class="deadline-text">Batas: 15 Okt 2026</span>
+                    <!-- Menggunakan style .btn-utama bawaan Adit -->
+                    <a href="detail-lowongan.html?id=1" class="btn-utama btn-sm">Lihat Detail &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Kartu 2 -->
+            <article class="job-card-row">
+                <div class="card-logo">
+                    <div class="logo-box">DK</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="job-title"><a href="detail-lowongan.html?id=2">Network & System Administrator Intern</a></h3>
+                    <p class="company-name">Dinas Komunikasi dan Informatika</p>
+                    <p class="job-desc">Mendukung pemeliharaan jaringan LAN, routing Cisco/Mikrotik, serta instalasi dan monitoring server instansi.</p>
+                    <div class="job-meta-tags">
+                        <span class="meta-tag">📍 Cilacap (On-site)</span>
+                        <span class="meta-tag">⏱️ 6 Bulan</span>
+                        <span class="meta-tag">🌐 Jaringan & Server</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span class="status-badge badge-open">Pendaftaran Dibuka</span>
+                    <span class="deadline-text">Batas: 20 Okt 2026</span>
+                    <a href="detail-lowongan.html?id=2" class="btn-utama btn-sm">Lihat Detail &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Kartu 3 -->
+            <article class="job-card-row">
+                <div class="card-logo">
+                    <div class="logo-box">SK</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="job-title"><a href="detail-lowongan.html?id=3">UI/UX Designer & Frontend Support</a></h3>
+                    <p class="company-name">Studio Kreasi Digital</p>
+                    <p class="job-desc">Merancang wireframe, flow pengguna, dan prototype Figma, serta membantu slicing tampilan halaman web.</p>
+                    <div class="job-meta-tags">
+                        <span class="meta-tag">📍 Remote (WFH)</span>
+                        <span class="meta-tag">⏱️ 3 Bulan</span>
+                        <span class="meta-tag">🎨 Desain & UI/UX</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span class="status-badge badge-closing">Segera Ditutup</span>
+                    <span class="deadline-text">Batas: 30 Sep 2026</span>
+                    <a href="detail-lowongan.html?id=3" class="btn-utama btn-sm">Lihat Detail &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Kartu 4 -->
+            <article class="job-card-row">
+                <div class="card-logo">
+                    <div class="logo-box">BP</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="job-title"><a href="detail-lowongan.html?id=4">Database Operations Intern</a></h3>
+                    <p class="company-name">BPR Syariah Mitra Mandiri</p>
+                    <p class="job-desc">Membantu optimasi query database, backup terjadwal, dan dokumentasi skema relasional sistem kasir/keuangan.</p>
+                    <div class="job-meta-tags">
+                        <span class="meta-tag">📍 Purwokerto (On-site)</span>
+                        <span class="meta-tag">⏱️ 6 Bulan</span>
+                        <span class="meta-tag">🗄️ Database Administrator</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span class="status-badge badge-closed">Ditutup</span>
+                    <span class="deadline-text">Batas: 10 Sep 2026</span>
+                    <a href="detail-lowongan.html?id=4" class="btn-sekunder btn-sm btn-disabled">Lihat Detail &rarr;</a>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Pagination / Penomoran Halaman -->
+        <nav class="katalog-pagination" aria-label="Navigasi Halaman Lowongan">
+            <ul class="pagination-list">
+                <li class="page-item disabled"><a href="#">&laquo;</a></li>
+                <li class="page-item active"><a href="#">1</a></li>
+                <li class="page-item"><a href="#">2</a></li>
+                <li class="page-item"><a href="#">3</a></li>
+                <li class="page-item"><a href="#">&raquo;</a></li>
+            </ul>
+        </nav>
+
     </div>
 </main>
 
-<!-- TEMPAT FOOTER (Tunggu Adit Selesai Nanti) -->
+<!-- FOOTER PERSIS SESUAI INDEX.HTML -->
 <footer id="footer-utama">
     <div class="container">
-        <p>&copy; 2026 SIMAG-JKB</p>
+        <p>&copy; 2026 SIMAG-JKB. All rights reserved.</p>
     </div>
 </footer>
+
 </body>
 </html>
