@@ -3,28 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMAG JKB</title>
+    <title>Tulis Ulasan Magang - SIMAG JKB</title>
     <!-- Link CSS Global -->
-    <link rel="stylesheet" href="global.css">
-    <!-- Link CSS Khusus Halaman (Nanti diubah oleh masing-masing) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link CSS Khusus Halaman (Ulasan) -->
     <link rel="stylesheet" href="style-ulasan.css">
 </head>
 <body>
-<!-- TEMPAT HEADER (Tunggu Adit Selesai Nanti) -->
+<!-- TEMPAT HEADER -->
 <header id="header-utama">
     <div class="container">
-        <h2 class="logo" style="color: var(--biru-trpl);">SIMAG-JKB</h2>
+        <h2 class="logo">SIMAG-JKB</h2>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog Magang</a></li>
+                <li><a href="ulasan.html" class="active">Form Ulasan</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<!-- KONTEN UTAMA HALAMAN MASING-MASING -->
+<!-- KONTEN UTAMA HALAMAN -->
 <main>
     <div class="container">
-        <!-- Teman-teman, mulai ngoding konten kalian di sini! -->
+        <!-- FORM TULIS ULASAN -->
+        <section class="form-ulasan-section">
+            <div class="form-header-text">
+                <span class="badge-tag">Testimoni Alumni & Mahasiswa</span>
+                <h2>Tulis Ulasan Pengalaman Magang</h2>
+                <p>Bagikan pengalamanmu untuk membantu adik tingkat Jurusan Komputer dan Bisnis dalam memilih tempat magang.</p>
+            </div>
+
+            <div class="form-card">
+                <form action="#" method="POST" class="ulasan-form">
+                    
+                    <!-- Nama & NIM -->
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="namaLengkap">Nama Lengkap <span class="required">*</span></label>
+                            <input type="text" id="namaLengkap" name="nama" class="form-input" placeholder="Contoh: Fadhel Aqila" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nimMahasiswa">NIM <span class="required">*</span></label>
+                            <input type="text" id="nimMahasiswa" name="nim" class="form-input" placeholder="Contoh: 230202011" required>
+                        </div>
+                    </div>
+
+                    <!-- Perusahaan & Posisi -->
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="namaPerusahaan">Nama Perusahaan / Instansi <span class="required">*</span></label>
+                            <input type="text" id="namaPerusahaan" name="perusahaan" class="form-input" placeholder="Contoh: PT Telkom Indonesia" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="posisiMagang">Posisi Magang <span class="required">*</span></label>
+                            <input type="text" id="posisiMagang" name="posisi" class="form-input" placeholder="Contoh: Web Developer Intern" required>
+                        </div>
+                    </div>
+
+                    <!-- Periode & Rating -->
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="periodeMagang">Periode Magang <span class="required">*</span></label>
+                            <select id="periodeMagang" name="periode" class="form-select" required>
+                                <option value="">-- Pilih Periode --</option>
+                                <option value="2026">Tahun 2026</option>
+                                <option value="2025">Tahun 2025</option>
+                                <option value="2024">Tahun 2024</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ratingPengalaman">Rating Pengalaman <span class="required">*</span></label>
+                            <select id="ratingPengalaman" name="rating" class="form-select" required>
+                                <option value="">-- Pilih Rating --</option>
+                                <option value="5">⭐⭐⭐⭐⭐ (5/5) - Sangat Memuaskan</option>
+                                <option value="4">⭐⭐⭐⭐ (4/5) - Bagus</option>
+                                <option value="3">⭐⭐⭐ (3/5) - Cukup</option>
+                                <option value="2">⭐⭐ (2/5) - Kurang</option>
+                                <option value="1">⭐ (1/5) - Buruk</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Judul Ulasan -->
+                    <div class="form-group">
+                        <label for="judulUlasan">Judul / Ringkasan Ulasan <span class="required">*</span></label>
+                        <input type="text" id="judulUlasan" name="judul" class="form-input" placeholder="Contoh: Lingkungan kerja sangat mendukung untuk pemula" required>
+                    </div>
+
+                    <!-- Isian Ulasan Utama -->
+                    <div class="form-group">
+                        <label for="isiUlasan">Detail Cerita & Pengalaman Magang <span class="required">*</span></label>
+                        <textarea id="isiUlasan" name="ulasan" class="form-textarea" rows="5" placeholder="Ceritakan alur kerja, bimbingan supervisor, ilmu yang didapat, hingga fasilitas magang..." required></textarea>
+                    </div>
+
+                    <!-- Rekomendasi Radio Button -->
+                    <div class="form-group">
+                        <label class="label-block">Apakah Anda merekomendasikan tempat magang ini?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="rekomendasi" value="ya" checked> Ya, Sangat Direkomendasikan
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="rekomendasi" value="tidak"> Tidak Direkomendasikan
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Kirim -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Kirim Ulasan</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
     </div>
 </main>
 
-<!-- TEMPAT FOOTER (Tunggu Adit Selesai Nanti) -->
+<!-- TEMPAT FOOTER -->
 <footer id="footer-utama">
     <div class="container">
         <p>&copy; 2026 SIMAG-JKB</p>
