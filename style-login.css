@@ -1,0 +1,552 @@
+/* =========================================
+   SIMAG-JKB
+   LOGIN & REGISTER
+   STYLE SESUAI HALAMAN UTAMA
+   ========================================= */
+
+.auth-page {
+    display: grid;
+    grid-template-columns: 48% 52%;
+    min-height: 650px;
+    background: #ffffff;
+}
+
+
+/* =========================================
+   BAGIAN LOGIN
+   ========================================= */
+
+.auth-form-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 60px;
+    background: #ffffff;
+}
+
+.auth-content {
+    width: 100%;
+    max-width: 420px;
+}
+
+
+/* Kembali */
+
+.back-home {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #555555;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.back-home:hover {
+    color: #0066c8;
+}
+
+
+/* Judul */
+
+.auth-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #0066c8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.auth-heading h1 {
+    margin: 0 0 8px;
+    color: #111111;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.auth-heading p {
+    margin: 0 0 22px;
+    color: #666666;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   INFORMATION BOX
+   ========================================= */
+
+.info-box {
+    display: flex;
+    gap: 10px;
+    padding: 13px;
+    margin-bottom: 15px;
+
+    border-left: 4px solid #0066c8;
+    border-radius: 5px;
+
+    background: #f1f7fd;
+}
+
+.info-icon {
+    width: 19px;
+    height: 19px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #0066c8;
+    border-radius: 50%;
+
+    color: #0066c8;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #0066c8;
+    font-size: 11px;
+}
+
+.info-box p {
+    margin: 0;
+    color: #666666;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GOOGLE
+   ========================================= */
+
+.google-button {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+
+    background: #ffffff;
+    color: #333333;
+
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.google-button:hover {
+    border-color: #0066c8;
+}
+
+
+/* =========================================
+   PEMISAH
+   ========================================= */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 17px 0;
+
+    color: #999999;
+    font-size: 9px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #dddddd;
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #222222;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 11px;
+    box-sizing: border-box;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #222222;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+.form-group input:focus {
+    border-color: #0066c8;
+    box-shadow: 0 0 0 2px rgba(0, 102, 200, 0.08);
+}
+
+
+/* =========================================
+   PASSWORD
+   ========================================= */
+
+.password-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-label a {
+    color: #0066c8;
+    font-size: 9px;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   INGAT SAYA
+   ========================================= */
+
+.form-option {
+    margin-bottom: 15px;
+}
+
+.form-option label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #666666;
+    font-size: 10px;
+}
+
+.form-option input {
+    accent-color: #0066c8;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.login-button {
+    width: 100%;
+    height: 40px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #0066c8;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: #0055a8;
+}
+
+
+/* =========================================
+   REGISTER LINK
+   ========================================= */
+
+.register-text {
+    margin-top: 16px;
+
+    text-align: center;
+
+    color: #666666;
+    font-size: 10px;
+}
+
+.register-text a {
+    color: #0066c8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    color: #e0a900;
+}
+
+
+/* =========================================
+   REGISTER
+   ========================================= */
+
+.register-form {
+    margin-top: 45px;
+    padding: 40px 60px;
+
+    border-top: 1px solid #eeeeee;
+
+    background: #f8f9fa;
+}
+
+.register-form .register-heading {
+    max-width: 420px;
+    margin: auto;
+}
+
+.register-form form {
+    max-width: 420px;
+    margin: auto;
+}
+
+.register-heading h2 {
+    margin: 0 0 7px;
+
+    color: #0066c8;
+    font-size: 23px;
+}
+
+.register-heading p {
+    margin: 0 0 20px;
+
+    color: #666666;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   BAGIAN KANAN
+   ========================================= */
+
+.auth-visual {
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: #0066c8;
+}
+
+
+/* Aksen kuning */
+
+.auth-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: -230px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background: #ffc400;
+}
+
+
+/* Dekorasi bawah */
+
+.auth-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -170px;
+    left: -120px;
+
+    border: 45px solid rgba(255, 196, 0, 0.25);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   KONTEN VISUAL
+   ========================================= */
+
+.visual-content {
+    position: relative;
+    z-index: 2;
+
+    min-height: 650px;
+
+    padding: 35px 45px;
+
+    box-sizing: border-box;
+}
+
+
+/* Logo */
+
+.visual-logo {
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.visual-logo strong {
+    color: #ffc400;
+}
+
+
+/* =========================================
+   TEXT KANAN
+   ========================================= */
+
+.visual-text {
+    position: absolute;
+
+    left: 45px;
+    bottom: 130px;
+
+    max-width: 400px;
+}
+
+.small-title {
+    color: #ffc400;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.visual-text h2 {
+    margin: 12px 0;
+
+    color: #ffffff;
+
+    font-size: 37px;
+    line-height: 1.15;
+}
+
+.visual-text h2 span {
+    color: #ffc400;
+}
+
+.visual-text p {
+    max-width: 370px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   DEKORASI
+   ========================================= */
+
+.visual-decoration {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 220px;
+    height: 220px;
+
+    right: 45px;
+    bottom: 50px;
+}
+
+.circle-two {
+    width: 140px;
+    height: 140px;
+
+    right: 85px;
+    bottom: 90px;
+
+    border-color: rgba(255, 196, 0, 0.6);
+}
+
+.square {
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    right: 45px;
+    top: 180px;
+
+    border: 15px solid rgba(255, 255, 255, 0.12);
+
+    transform: rotate(25deg);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-visual {
+        display: none;
+    }
+
+    .auth-form-area {
+        padding: 40px 25px;
+    }
+
+    .register-form {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .auth-heading h1 {
+        font-size: 26px;
+    }
+
+    .auth-form-area {
+        padding: 30px 18px;
+    }
+}
