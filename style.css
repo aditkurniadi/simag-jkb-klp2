@@ -26,3 +26,73 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.container {
+    width: 90%; /* Memberikan jarak aman di kiri dan kanan layar */
+    max-width: 1200px; /* Batas maksimal lebar konten di layar laptop/PC besar */
+    margin: 0 auto; /* Memposisikan konten pas di tengah layar */
+}
+
+#header-utama {
+    background-color: var(--bg-putih, #ffffff);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Memberikan bayangan lembut di bawah navbar */
+    position: sticky;
+    top: 0;
+    z-index: 999; /* Memastikan navbar selalu berada di atas konten lain saat di-scroll */
+    padding: 15px 0;
+}
+
+#header-utama .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-utama .logo {
+    margin: 0;
+    color: var(--biru-trpl);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#header-utama .navbar ul {
+    list-style: none; /* Menghilangkan titik (bullet) bawaan HTML */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Jarak antar teks menu */
+}
+
+#header-utama .navbar ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah bawaan HTML */
+    color: var(--teks-utama);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Efek transisi halus saat di-hover */
+}
+
+#header-utama .navbar ul li a:hover {
+    color: var(--biru-trpl);
+}
+
+#header-utama .navbar ul li a.active {
+    color: var(--biru-trpl);
+    border-bottom: 3px solid var(--kuning-jkb); /* Garis bawah kuning sebagai aksen */
+    padding-bottom: 5px;
+}
+
+#header-utama .navbar ul li:last-child a {
+    background-color: var(--kuning-jkb);
+    color: var(--teks-utama);
+    padding: 10px 24px;
+    border-radius: 8px; /* Membuat sudut tombol melengkung */
+    font-weight: 700;
+}
+
+#header-utama .navbar ul li:last-child a:hover {
+    background-color: var(--kuning-jkb-gelap);
+    color: #fff;
+    border-bottom: none; /* Mencegah munculnya garis bawah aktif pada tombol */
+}
