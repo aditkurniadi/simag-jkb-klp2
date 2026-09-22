@@ -3,33 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMAG JKB</title>
+    <title>Detail Lowongan - SIMAG JKB</title>
     <!-- Link CSS Global -->
-    <link rel="stylesheet" href="global.css">
-    <!-- Link CSS Khusus Halaman (Nanti diubah oleh masing-masing) -->
-    <link rel="stylesheet" href="style-halaman-ini.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Link CSS Khusus Halaman Detail -->
+    <link rel="stylesheet" href="style-detail.css">
 </head>
 <body>
-<!-- TEMPAT HEADER (Tunggu Adit Selesai Nanti) -->
+
+<!-- HEADER PERSIS SESUAI INDEX.HTML & KATALOG.HTML -->
 <header id="header-utama">
     <div class="container">
-        <h2 class="logo" style="color: var(--biru-trpl);">SIMAG-JKB</h2>
+        <h2 class="logo">SIMAG-JKB</h2>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html" class="active">Katalog Magang</a></li>
+                <li><a href="ulasan.html">Form Ulasan</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<!-- KONTEN UTAMA HALAMAN MASING-MASING -->
-<main>
+<!-- KONTEN UTAMA HALAMAN DETAIL -->
+<main id="detail-section">
     <div class="container">
-        <!-- Teman-teman, mulai ngoding konten kalian di sini! -->
-         hehe
+        <section class="detail-page" aria-labelledby="job-title">
+            <!-- Hero Header Lowongan -->
+            <div class="job-hero">
+                <div class="job-hero__content">
+                    <p class="eyebrow">Lowongan Magang · Teknologi Informasi</p>
+                    <h1 id="job-title">Frontend Developer Intern</h1>
+                    <div class="job-meta">
+                        <span class="company-name">PT. Nusantara Digital Indonesia</span>
+                        <span class="location">Jakarta Selatan</span>
+                    </div>
+                    <div class="job-tags">
+                        <span class="tag tag--accent">WFH / Onsite</span>
+                        <span class="tag">Full-time</span>
+                        <span class="tag">3–6 bulan</span>
+                    </div>
+                </div>
+
+                <div class="job-actions">
+                    <a class="btn-utama" href="#apply">Lamar Sekarang</a>
+                    <button class="btn-sekunder" type="button">Simpan</button>
+                </div>
+            </div>
+
+            <!-- Informasi Detail Pekerjaan -->
+            <div class="job-information">
+                <article class="information-card">
+                    <h2>Deskripsi Pekerjaan</h2>
+                    <p>
+                        Membantu tim engineering mengembangkan antarmuka website yang
+                        responsif, modern, dan mudah digunakan. Kamu akan terlibat dalam
+                        implementasi UI, perbaikan bug, serta kolaborasi dengan designer
+                        dan backend developer.
+                    </p>
+                </article>
+
+                <article class="information-card">
+                    <h2>Persyaratan / Kualifikasi</h2>
+                    <ul>
+                        <li>Mahasiswa aktif atau lulusan baru dari jurusan terkait IT.</li>
+                        <li>Memahami HTML, CSS, JavaScript, dan dasar React atau Vue.</li>
+                        <li>Memiliki portofolio proyek frontend yang relevan.</li>
+                        <li>Mampu bekerja dalam tim dan terbuka terhadap feedback.</li>
+                        <li>Siap mengikuti program magang selama 3–6 bulan.</li>
+                    </ul>
+                </article>
+
+                <article class="information-card">
+                    <h2>Benefit & Fasilitas</h2>
+                    <ul>
+                        <li>Uang saku bulanan yang kompetitif.</li>
+                        <li>Mentoring langsung dari developer senior.</li>
+                        <li>Pengaturan kerja hybrid yang fleksibel.</li>
+                        <li>Pelatihan teknologi dan sertifikat pengalaman.</li>
+                        <li>Kesempatan rekrutmen penuh waktu.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Bagian Ulasan Alumni -->
+            <section class="reviews" aria-labelledby="reviews-title">
+                <div class="reviews__header">
+                    <div>
+                        <p class="eyebrow">Transparansi Alumni</p>
+                        <h2 id="reviews-title">Ulasan Alumni</h2>
+                    </div>
+                    <a class="btn-sekunder btn-sm" href="ulasan.html">Tulis Ulasan</a>
+                </div>
+
+                <div class="rating-summary">
+                    <div class="rating-score">
+                        <strong>4.8</strong>
+                        <span>/ 5.0</span>
+                    </div>
+                    <div>
+                        <div class="stars" aria-label="Rating 4,8 dari 5">★★★★★</div>
+                        <p>Berdasarkan 124 ulasan alumni</p>
+                    </div>
+                </div>
+
+                <div class="review-list">
+                    <article class="review-card">
+                        <div class="review-card__header">
+                            <div>
+                                <h3>Rina Amelia</h3>
+                                <p class="batch">Angkatan 2022</p>
+                            </div>
+                            <time datetime="2026-09-12">12 Sep 2026</time>
+                        </div>
+                        <div class="review-stars" aria-label="Rating 5 dari 5">★★★★★</div>
+                        <p>
+                            Proses magang sangat terstruktur dan mentor sangat membantu.
+                            Saya belajar banyak tentang workflow frontend dan kolaborasi tim.
+                        </p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__header">
+                            <div>
+                                <h3>Fajar Hidayat</h3>
+                                <p class="batch">Angkatan 2021</p>
+                            </div>
+                            <time datetime="2026-09-05">05 Sep 2026</time>
+                        </div>
+                        <div class="review-stars" aria-label="Rating 5 dari 5">★★★★★</div>
+                        <p>
+                            Lingkungan kerja nyaman dan project-nya menantang. Timnya
+                            komunikatif serta memberi ruang untuk terus berkembang.
+                        </p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__header">
+                            <div>
+                                <h3>Salsa Putri</h3>
+                                <p class="batch">Angkatan 2023</p>
+                            </div>
+                            <time datetime="2026-08-27">27 Agu 2026</time>
+                        </div>
+                        <div class="review-stars" aria-label="Rating 4 dari 5">★★★★☆</div>
+                        <p>
+                            Fasilitas cukup baik dan proses pembelajaran terasa nyata.
+                            Saya mendapat banyak insight tentang frontend di industri.
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </section>
     </div>
 </main>
 
-<!-- TEMPAT FOOTER (Tunggu Adit Selesai Nanti) -->
+<!-- FOOTER PERSIS SESUAI INDEX.HTML -->
 <footer id="footer-utama">
-    <div class="container">
-        <p>&copy; 2026 SIMAG-JKB</p>
+    <div class="container footer-wrapper">
+        <div class="footer-brand">
+            <h3>SIMAG-JKB</h3>
+            <p>Platform direktori magang terpusat untuk mahasiswa Jurusan Komputer dan Bisnis Politeknik Negeri Cilacap. Transparan, cepat, dan sesuai kompetensi.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Tautan Cepat</h4>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog Magang</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Hubungi Kami</h4>
+            <p>📍 Jl. Dr. Soetomo No.1, Sidakaya, Cilacap</p>
+            <p>✉️ admin.simag@pnc.ac.id</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container text-center">
+            <p>&copy; 2026 Kelompok 2 TRPL 2B - Politeknik Negeri Cilacap.</p>
+        </div>
     </div>
 </footer>
+
 </body>
 </html>
