@@ -4,83 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIMAG JKB</title>
+
     <!-- Link CSS Global -->
     <link rel="stylesheet" href="style.css">
-    <!-- Link CSS Khusus Halaman (Nanti diubah oleh masing-masing) -->
+
+    <!-- Link CSS Khusus Halaman -->
     <link rel="stylesheet" href="style-login.css">
 </head>
+
 <body>
+
 <!-- TEMPAT HEADER (Tunggu Adit Selesai Nanti) -->
 <header id="header-utama">
     <div class="container">
+
         <h2 class="logo">SIMAG-JKB</h2>
+
         <nav class="navbar">
             <ul>
-                <li><a href="index.html" class="active">Beranda</a></li>
-                <li><a href="katalog.html">Katalog Magang</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li>
+                    <a href="index.html">Beranda</a>
+                </li>
+
+                <li>
+                    <a href="katalog.html">Katalog Magang</a>
+                </li>
+
+                <li>
+                    <a href="ulasan.html">Form Ulasan</a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="active">Login</a>
+                </li>
             </ul>
         </nav>
+
     </div>
 </header>
 
-<!-- KONTEN UTAMA HALAMAN MASING-MASING -->
+
+<!-- KONTEN UTAMA HALAMAN -->
 <main>
     <div class="container">
 
-        <!-- BAGIAN LOGIN & REGISTER -->
+        <!-- ==========================
+             BAGIAN LOGIN
+        =========================== -->
+
         <section class="auth-page">
 
             <!-- BAGIAN KIRI: FORM LOGIN -->
             <div class="auth-form-area">
+
                 <div class="auth-content">
 
-                    <a href="#" class="back-home">
+                    <!-- Kembali ke Beranda -->
+                    <a href="index.html" class="back-home">
                         ← Kembali ke Beranda
                     </a>
 
-                    <div class="auth-heading">
-                        <span class="auth-label">SIMAG-JKB</span>
 
-                        <h1>Selamat Datang Kembali</h1>
+                    <!-- JUDUL LOGIN -->
+                    <div class="auth-heading">
+
+                        <span class="auth-label">
+                            SIMAG-JKB
+                        </span>
+
+                        <h1>
+                            Selamat Datang Kembali
+                        </h1>
 
                         <p>
                             Login untuk melanjutkan perjalanan magangmu.
                         </p>
+
                     </div>
+
 
                     <!-- INFORMASI -->
                     <div class="info-box">
 
-                        <span class="info-icon">i</span>
+                        <span class="info-icon">
+                            i
+                        </span>
 
                         <div>
-                            <strong>Informasi</strong>
+
+                            <strong>
+                                Informasi
+                            </strong>
 
                             <p>
                                 Gunakan akun mahasiswa untuk mengakses
                                 rekomendasi dan pencarian magang yang
                                 sesuai dengan profilmu.
                             </p>
+
                         </div>
 
                     </div>
 
-                    <!-- LOGIN DENGAN GOOGLE -->
-                    <button type="button" class="google-button">
+
+                    <!-- LOGIN GOOGLE -->
+                    <button
+                        type="button"
+                        class="google-button">
+
                         <span>G</span>
+
                         Masuk dengan Google
+
                     </button>
+
 
                     <!-- PEMISAH -->
                     <div class="divider">
-                        <span>ATAU</span>
+
+                        <span>
+                            ATAU
+                        </span>
+
                     </div>
+
 
                     <!-- FORM LOGIN -->
                     <form>
 
+                        <!-- EMAIL -->
                         <div class="form-group">
+
                             <label for="login-email">
                                 Email
                             </label>
@@ -91,11 +145,15 @@
                                 name="email"
                                 placeholder="Masukkan email"
                                 required>
+
                         </div>
 
+
+                        <!-- PASSWORD -->
                         <div class="form-group">
 
                             <div class="password-label">
+
                                 <label for="login-password">
                                     Password
                                 </label>
@@ -103,6 +161,7 @@
                                 <a href="#">
                                     Lupa password?
                                 </a>
+
                             </div>
 
                             <input
@@ -114,46 +173,69 @@
 
                         </div>
 
+
+                        <!-- INGAT SAYA -->
                         <div class="form-option">
 
                             <label>
+
                                 <input
                                     type="checkbox"
                                     name="remember">
 
                                 Ingat saya
+
                             </label>
 
                         </div>
 
+
+                        <!-- BUTTON LOGIN -->
                         <button
                             type="submit"
                             class="login-button">
+
                             Login
+
                         </button>
 
                     </form>
 
+
+                    <!-- LINK REGISTER -->
                     <p class="register-text">
+
                         Belum memiliki akun?
-                        <a href="#register">
+
+                        <a href="register.html">
                             Daftar sekarang
                         </a>
+
                     </p>
 
                 </div>
+
             </div>
 
 
-            <!-- BAGIAN KANAN: VISUAL -->
+            <!-- ==========================
+                 BAGIAN KANAN: VISUAL
+            =========================== -->
+
             <div class="auth-visual">
 
                 <div class="visual-content">
 
+
+                    <!-- LOGO -->
                     <div class="visual-logo">
+
                         SIMAG<strong>-JKB</strong>
+
                     </div>
 
+
+                    <!-- TEKS VISUAL -->
                     <div class="visual-text">
 
                         <span class="small-title">
@@ -161,9 +243,15 @@
                         </span>
 
                         <h2>
+
                             Temukan Magang
-                            <span>yang Sesuai</span>
+
+                            <span>
+                                yang Sesuai
+                            </span>
+
                             denganmu.
+
                         </h2>
 
                         <p>
@@ -174,7 +262,8 @@
 
                     </div>
 
-                    <!-- DEKORASI VISUAL -->
+
+                    <!-- DEKORASI -->
                     <div class="visual-decoration">
 
                         <div class="circle circle-one"></div>
@@ -191,126 +280,22 @@
 
         </section>
 
-
-        <!-- ================================= -->
-        <!-- BAGIAN REGISTER -->
-        <!-- ================================= -->
-
-        <section class="register-form" id="register">
-
-            <div class="register-heading">
-
-                <h2>Buat Akun Baru</h2>
-
-                <p>
-                    Daftarkan akun mahasiswa untuk menggunakan
-                    SIMAG-JKB.
-                </p>
-
-            </div>
-
-            <form>
-
-                <div class="form-group">
-
-                    <label for="nama">
-                        Nama Lengkap
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nama"
-                        name="nama"
-                        placeholder="Masukkan nama lengkap"
-                        required>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="nim">
-                        NIM
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nim"
-                        name="nim"
-                        placeholder="Masukkan NIM"
-                        required>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="register-email">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="register-email"
-                        name="email"
-                        placeholder="Masukkan email"
-                        required>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="register-password">
-                        Password
-                    </label>
-
-                    <input
-                        type="password"
-                        id="register-password"
-                        name="password"
-                        placeholder="Buat password"
-                        required>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="confirm-password">
-                        Konfirmasi Password
-                    </label>
-
-                    <input
-                        type="password"
-                        id="confirm-password"
-                        name="confirm-password"
-                        placeholder="Ulangi password"
-                        required>
-
-                </div>
-
-                <button
-                    type="submit"
-                    class="login-button">
-                    Daftar
-                </button>
-
-            </form>
-
-            <p class="register-text">
-                Sudah memiliki akun?
-                <a href="#login">
-                    Masuk di sini
-                </a>
-            </p>
-
-        </section>
-
     </div>
 </main>
 
+
 <!-- TEMPAT FOOTER (Tunggu Adit Selesai Nanti) -->
 <footer id="footer-utama">
+
     <div class="container">
-        <p>&copy; 2026 SIMAG-JKB</p>
+
+        <p>
+            &copy; 2026 SIMAG-JKB
+        </p>
+
     </div>
+
 </footer>
+
 </body>
 </html>
