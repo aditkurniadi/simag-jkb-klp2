@@ -7,10 +7,10 @@ Repositori ini adalah tempat kolaborasi **Kelompok 2 (TRPL 2B)** untuk proyek Pr
 Karena kita bekerja berlima dalam satu halaman (`index.html`), tugas dibagi per **Section (Bagian)** agar tidak bentrok:
 
 - [ ] **Adit Kurniadi:** Setup Kerangka HTML, Navbar, dan Setup Global CSS (External).
-- [ ] **Galang Arrafi:** Desain Hero Section (Tampilan paling atas, teks sambutan & tombol CTA).
+- [ ] **Rizqi Radhityanto:** Desain Hero Section (Tampilan paling atas, teks sambutan & tombol CTA).
 - [ ] **M. Fadhel Aqila:** Desain Section About / Solusi (Penjelasan keunggulan SIMAG-JKB).
 - [ ] **Nirvana Antika:** Desain Section Preview Katalog (Card/Grid contoh lowongan magang).
-- [ ] **Rizqi Radhityanto:** Desain Section Testimoni Alumni & Footer halaman.
+- [ ] **Galang Arrafi:** Desain Section Testimoni Alumni & Footer halaman.
 
 ## Aturan Main (Wajib Dibaca Sebelum Coding)
 
