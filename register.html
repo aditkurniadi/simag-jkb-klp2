@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIMAG JKB - Register</title>
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS Khusus Login & Register -->
+    <link rel="stylesheet" href="style-login.css">
+</head>
+
+<body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header id="header-utama">
+    <div class="container">
+
+        <h2 class="logo">
+            SIMAG-JKB
+        </h2>
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="katalog.html">
+                        Katalog Magang
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ulasan.html">
+                        Form Ulasan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     KONTEN UTAMA
+========================================= -->
+
+<main>
+
+    <div class="container">
+
+        <section class="auth-page">
+
+
+            <!-- =================================
+                 BAGIAN KIRI
+            ================================== -->
+
+            <div class="auth-form-area">
+
+                <div class="auth-content">
+
+
+                    <!-- KEMBALI KE LOGIN -->
+
+                    <a
+                        href="login.html"
+                        class="back-home">
+
+                        ← Kembali ke Login
+
+                    </a>
+
+
+                    <!-- =================================
+                         JUDUL REGISTER
+                    ================================== -->
+
+                    <div class="auth-heading">
+
+                        <span class="auth-label">
+                            SIMAG-JKB
+                        </span>
+
+                        <h1>
+                            Buat Akun Baru
+                        </h1>
+
+                        <p>
+                            Daftarkan akun mahasiswa untuk menggunakan
+                            SIMAG-JKB.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================
+                         FORM REGISTER
+                    ================================== -->
+
+                    <form>
+
+
+                        <!-- NAMA LENGKAP -->
+
+                        <div class="form-group">
+
+                            <label for="nama">
+                                Nama Lengkap
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nama"
+                                name="nama"
+                                placeholder="Masukkan nama lengkap"
+                                required>
+
+                        </div>
+
+
+                        <!-- NIM -->
+
+                        <div class="form-group">
+
+                            <label for="nim">
+                                NIM
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nim"
+                                name="nim"
+                                placeholder="Masukkan NIM"
+                                required>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="register-email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="register-email"
+                                name="email"
+                                placeholder="Masukkan email"
+                                required>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="register-password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="register-password"
+                                name="password"
+                                placeholder="Buat password"
+                                required>
+
+                        </div>
+
+
+                        <!-- KONFIRMASI PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="confirm-password">
+                                Konfirmasi Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm-password"
+                                placeholder="Ulangi password"
+                                required>
+
+                        </div>
+
+
+                        <!-- BUTTON DAFTAR -->
+
+                        <button
+                            type="submit"
+                            class="login-button">
+
+                            Daftar
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- =================================
+                         LINK KE LOGIN
+                    ================================== -->
+
+                    <p class="register-text">
+
+                        Sudah memiliki akun?
+
+                        <a href="login.html">
+                            Masuk di sini
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 BAGIAN KANAN / VISUAL
+            ================================== -->
+
+            <div class="auth-visual">
+
+                <div class="visual-content">
+
+
+                    <!-- LOGO -->
+
+                    <div class="visual-logo">
+
+                        SIMAG<strong>-JKB</strong>
+
+                    </div>
+
+
+                    <!-- TEXT VISUAL -->
+
+                    <div class="visual-text">
+
+                        <span class="small-title">
+                            MULAI PERJALANANMU
+                        </span>
+
+                        <h2>
+
+                            Siapkan Dirimu
+                            <span>untuk Magang.</span>
+
+                        </h2>
+
+                        <p>
+
+                            Buat akun mahasiswa dan temukan
+                            rekomendasi magang yang sesuai
+                            dengan minat dan kompetensimu.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================
+                         DEKORASI
+                    ================================== -->
+
+                    <div class="visual-decoration">
+
+                        <div class="circle circle-one"></div>
+
+                        <div class="circle circle-two"></div>
+
+                        <div class="square"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer id="footer-utama">
+
+    <div class="container text-center">
+
+        <p>
+            &copy; 2026 Kelompok 2 TRPL 2B -
+                Politeknik Negeri Cilacap.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
