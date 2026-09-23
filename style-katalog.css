@@ -276,7 +276,7 @@
     }
 }
 /* ========================================= */
-/* FOOTER PERSIS SESUAI STYLE TIM            */
+/* FOOTER        */
 /* ========================================= */
 #footer-utama {
     background-color: var(--biru-trpl);
@@ -365,4 +365,4 @@
         flex-direction: column;
         gap: 30px;
     }
-}
+}   
