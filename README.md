@@ -7,7 +7,7 @@ Fokus aplikasi kita: Platform Katalog Magang Terpusat & Transparansi Ulasan Alum
 
 Agar tidak saling tunggu dan mencegah kode bertubrukan (conflict di Git), tugas dibagi per halaman. Masing-masing bertanggung jawab penuh atas HTML dan CSS di halamannya.
 
-- [ ] Adit: index.html & style-index.css (Landing Page + Master Navbar & Footer)
+- [on Progress] Adit: index.html & style-index.css (Landing Page + Master Navbar & Footer)
 - [ ] Rizqi: katalog.html & style-katalog.css (Halaman Katalog Lowongan Magang & Filter)
 - [ ] Nirvana: detail-magang.html & style-detail.css (Halaman Detail Lowongan & List Ulasan)
 - [ ] Fadhel: tulis-ulasan.html & style-ulasan.css (Halaman Form Input Tulis Ulasan)
@@ -36,5 +36,37 @@ Karena Adit sedang mendesain Navbar dan Footer, kalian TIDAK PERLU MENUNGGU Adit
   Contoh cara pakai di CSS kalian: `background-color: var(--kuning-jkb);`
 * Jangan Sentuh File Orang Lain
   Fokus saja edit HTML dan CSS milikmu sendiri.
+
+## Panduan Darurat Git (Troubleshooting)
+
+Bagian ini berisi solusi untuk masalah Git yang paling sering terjadi selama pengerjaan proyek.
+
+### 1. File di GitHub sudah baru, tapi di terminal tertulis "Already up to date"
+Ini terjadi karena kamu melakukan pull saat masih berada di branch milikmu sendiri. Ikuti langkah berurutan ini:
+
+1. Cek posisi branch kamu saat ini:
+   `git branch` (Pastikan kamu tahu sedang di branch mana)
+2. Pindah ke branch utama:
+   `git checkout main`
+3. Tarik paksa pembaruan dari server:
+   `git pull origin main`
+4. Kembali ke branch tugasmu:
+   `git checkout nama-branch-kamu`
+5. Gabungkan kode terbaru dari main ke branch-mu:
+   `git merge main`
+
+### 2. Terminal nyangkut di layar Editor (Vim) saat melakukan Merge
+Jika setelah melakukan pull atau merge terminal berubah menjadi layar teks yang kaku dan tidak bisa diketik dengan normal:
+1. Tekan tombol `Esc` satu kali.
+2. Ketik `:wq` lalu tekan `Enter`. (Ini adalah perintah untuk Write dan Quit).
+3. Proses merge selesai.
+
+### 3. Solusi Sapu Jagat (Jika main lokal benar-benar rusak)
+Peringatan: Perintah ini akan menghapus semua pekerjaan di branch main lokalmu yang belum di-commit dan menyamakannya persis 100% dengan GitHub. Pastikan pindah ke `main` dulu sebelum mengetik ini.
+
+1. Ambil data terbaru dari server tanpa menggabungkan:
+   `git fetch origin`
+2. Timpa paksa file lokal dengan file server:
+   `git reset --hard origin/main`
 
 Semangat nugasnya! Kalau ada error Git atau CSS Flexbox yang mentok, langsung bahas di grup WA.
