@@ -1,29 +1,18 @@
-/* Styling konten katalog lowongan */
+/* Layout Spacing */
 .main-katalog {
-    padding: 40px 0 60px;
+    padding: 30px 0 60px 0;
 }
 
 .katalog-top {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.katalog-top .section-title {
-    margin: 0 0 8px 0;
-    font-size: 2rem;
-}
-
-.katalog-top .sub-text {
-    color: var(--teks-pudar);
-    margin: 0 0 20px 0;
-    font-size: 1rem;
-}
-
-/* Box form filter */
+/* Form Filter Memanjang */
 .box-filter {
     background-color: var(--bg-putih);
-    padding: 14px;
+    padding: 12px 16px;
     border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -31,13 +20,12 @@
 }
 
 .form-input {
-    padding: 10px 14px;
+    padding: 9px 14px;
     border: 1px solid #ced4da;
-    border-radius: 8px;
+    border-radius: 6px;
     font-family: inherit;
     font-size: 0.92rem;
     color: var(--teks-utama);
-    background-color: #fff;
     outline: none;
 }
 
@@ -56,48 +44,69 @@
     border-color: var(--biru-trpl);
 }
 
-.box-filter .btn-utama {
-    border: none;
+.btn-sm {
+    padding: 9px 18px;
+    font-size: 0.88rem;
     cursor: pointer;
-    font-family: inherit;
-    font-size: 0.95rem;
 }
 
-/* Container list kartu */
-.list-lowongan {
+/* --- SPLIT VIEW ALA LINKEDIN --- */
+.split-layout {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* 1. SISI KIRI (Sidebar Daftar Lowongan) */
+.jobs-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-top: 20px;
+    gap: 10px;
+    max-height: calc(100vh - 170px);
+    overflow-y: auto;
+    padding-right: 6px;
 }
 
-/* Kartu horizontal */
-.card-item {
+/* Scrollbar tipis rapi */
+.jobs-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.jobs-sidebar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.job-card-item {
     background: var(--bg-putih);
+    border: 1px solid #e2e8f0;
     border-radius: 10px;
-    padding: 20px;
+    padding: 16px;
     display: flex;
-    align-items: center;
-    gap: 20px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
-    border: 1px solid #edf2f7;
-    transition: 0.25s ease;
+    gap: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.card-item:hover {
-    transform: translateY(-3px);
+.job-card-item:hover {
     border-color: var(--biru-trpl);
-    box-shadow: 0 8px 16px rgba(0, 86, 179, 0.08);
+    background-color: #fcfdfe;
 }
 
-/* Kolom logo kotak */
-.logo-instansi {
-    width: 58px;
-    height: 58px;
-    background-color: #eaf2fb;
+/* Tanda kartu yang sedang aktif dilihat */
+.job-card-item.active {
+    border-left: 5px solid var(--biru-trpl);
+    border-color: var(--biru-trpl);
+    background-color: #f4f8fd;
+}
+
+.card-logo {
+    width: 48px;
+    height: 48px;
+    background: #eaf2fb;
     color: var(--biru-trpl);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -105,159 +114,255 @@
     flex-shrink: 0;
 }
 
-/* Kolom info tengah */
-.detail-pekerjaan {
+.card-info {
     flex: 1;
 }
 
-.detail-pekerjaan h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.2rem;
-}
-
-.detail-pekerjaan h3 a {
+.card-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
     color: var(--biru-trpl);
-    text-decoration: none;
 }
 
-.detail-pekerjaan h3 a:hover {
-    color: var(--biru-trpl-gelap);
-}
-
-.detail-pekerjaan .nama-kantor {
-    display: block;
-    color: var(--teks-pudar);
-    font-size: 0.9rem;
+.card-info .company-text {
+    margin: 0 0 4px 0;
+    font-size: 0.88rem;
+    color: var(--teks-utama);
     font-weight: 600;
+}
+
+.card-info .location-text {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--teks-pudar);
     margin-bottom: 8px;
 }
 
-.detail-pekerjaan p {
-    color: var(--teks-utama);
-    font-size: 0.9rem;
-    margin: 0 0 12px 0;
-    line-height: 1.45;
-}
-
-.tags-wrapper {
+.tags-row {
     display: flex;
     gap: 6px;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 .badge-tag {
-    background-color: var(--bg-dasar);
+    background: var(--bg-dasar);
     color: var(--teks-pudar);
-    font-size: 0.8rem;
-    padding: 4px 10px;
-    border-radius: 6px;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
     border: 1px solid #e2e8f0;
 }
 
-/* Kolom aksi kanan */
-.side-kanan {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    min-width: 135px;
-    flex-shrink: 0;
-}
-
-.btn-sm {
-    padding: 8px 16px;
-    font-size: 0.85rem;
-}
-
-.btn-mati {
-    border-color: #dee2e6;
-    color: var(--teks-pudar);
-    pointer-events: none;
-    background-color: #f1f3f5;
-}
-
-.status {
-    font-size: 0.75rem;
+.badge-status {
+    font-size: 0.72rem;
     font-weight: 700;
-    padding: 4px 8px;
-    border-radius: 5px;
+    padding: 3px 8px;
+    border-radius: 4px;
 }
 
-.status.buka {
-    background-color: #d1e7dd;
-    color: #0f5132;
+.badge-status.open { background: #d1e7dd; color: #0f5132; }
+.badge-status.warning { background: #fff3cd; color: #856404; }
+.badge-status.closed { background: #e2e3e5; color: #6c757d; }
+
+
+/* 2. SISI KANAN (Sticky Preview Box) */
+.job-preview-panel {
+    position: sticky;
+    top: 90px; /* Pas di bawah navbar header */
 }
 
-.status.segera {
-    background-color: #fff3cd;
-    color: #856404;
+.preview-box {
+    background: var(--bg-putih);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.status.tutup {
-    background-color: #e9ecef;
-    color: #6c757d;
-}
-
-.side-kanan small {
-    color: var(--teks-pudar);
-    font-size: 0.78rem;
-}
-
-/* Pagination */
-.pagination {
+.preview-logo-title {
     display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.large-logo {
+    width: 62px;
+    height: 62px;
+    background: #eaf2fb;
+    color: var(--biru-trpl);
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 6px;
-    margin-top: 35px;
 }
 
-.page-link {
-    display: inline-block;
-    padding: 7px 14px;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    background: #fff;
-    color: var(--teks-utama);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.88rem;
-}
-
-.page-link:hover:not(.active):not(.disabled) {
-    border-color: var(--biru-trpl);
+.preview-logo-title h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
     color: var(--biru-trpl);
 }
 
-.page-link.active {
+.preview-company {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--teks-utama);
+}
+
+.preview-meta {
+    font-size: 0.88rem;
+    color: var(--teks-pudar);
+}
+
+.preview-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.preview-divider {
+    border: 0;
+    border-top: 1px solid #edf2f7;
+    margin: 20px 0;
+}
+
+.preview-body h4 {
+    margin: 18px 0 8px 0;
+    color: var(--teks-utama);
+    font-size: 1.05rem;
+}
+
+.preview-body p {
+    color: var(--teks-utama);
+    line-height: 1.6;
+    font-size: 0.93rem;
+    margin: 0;
+}
+
+.quick-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: var(--bg-dasar);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+}
+
+.preview-body ul {
+    margin: 8px 0 0 20px;
+    padding: 0;
+    color: var(--teks-utama);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* Responsif untuk Layar Tablet/HP */
+@media (max-width: 900px) {
+    .split-layout {
+        grid-template-columns: 1fr;
+    }
+    .jobs-sidebar {
+        max-height: none;
+        overflow-y: visible;
+    }
+    .job-preview-panel {
+        position: static;
+        margin-top: 20px;
+    }
+}
+/* ========================================= */
+/* FOOTER PERSIS SESUAI STYLE TIM            */
+/* ========================================= */
+#footer-utama {
     background-color: var(--biru-trpl);
-    border-color: var(--biru-trpl);
-    color: #fff;
+    color: #ffffff;
+    padding-top: 50px;
+    margin-top: 50px;
 }
 
-.page-link.disabled {
-    color: #ced4da;
-    background-color: var(--bg-dasar);
-    pointer-events: none;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
 }
 
-/* Responsif HP */
+.footer-col {
+    flex: 1;
+}
+
+.brand-col {
+    flex: 1.5; /* Kolom logo & teks dibuat lebih lebar */
+}
+
+/* Judul Logo & Heading Kuning */
+.footer-logo {
+    color: var(--kuning-jkb);
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+    letter-spacing: 0.5px;
+}
+
+.footer-heading {
+    color: var(--kuning-jkb);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 18px 0;
+}
+
+.footer-col p {
+    color: #f1f5f9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+/* List Navigasi */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--kuning-jkb);
+    padding-left: 4px;
+}
+
+/* Bar Bawah / Copyright */
+.footer-bottom {
+    background-color: var(--biru-trpl-gelap);
+    padding: 16px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #e2e8f0;
+}
+
+/* Responsif Mobile / Layar HP */
 @media (max-width: 768px) {
-    .box-filter {
+    .footer-content {
         flex-direction: column;
-        align-items: stretch;
-    }
-
-    .card-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .side-kanan {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid #edf2f7;
-        padding-top: 12px;
+        gap: 30px;
     }
 }

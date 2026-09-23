@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katalog Magang - SIMAG JKB</title>
+    <!-- Style Utama Adit -->
     <link rel="stylesheet" href="style.css">
+    <!-- Style Khusus Split View LinkedIn -->
     <link rel="stylesheet" href="style-katalog.css">
 </head>
 <body>
 
-<!-- Header (ngikut index punya adit) -->
 <header id="header-utama">
     <div class="container">
         <h2 class="logo">SIMAG-JKB</h2>
@@ -27,133 +28,304 @@
 <main class="main-katalog">
     <div class="container">
         
-        <!-- Filter & Search -->
+        <!-- Bar Pencarian & Filter Atas -->
         <div class="katalog-top">
-            <h2 class="section-title">Daftar Lowongan Magang</h2>
-            <p class="sub-text">Pilih tempat magang yang cocok sama keahlian kamu.</p>
-            
-            <form class="box-filter" action="" method="GET">
-                <input type="text" name="cari" placeholder="Cari posisi atau instansi..." class="form-input search-input">
-                <select name="divisi" class="form-input">
+            <form class="box-filter" id="form-filter" onsubmit="event.preventDefault();">
+                <input type="text" id="cari-input" placeholder="Cari posisi atau nama kantor..." class="form-input search-input">
+                <select id="divisi-filter" class="form-input">
                     <option value="">Semua Bidang</option>
                     <option value="software">Software Engineering</option>
                     <option value="jaringan">Jaringan & Server</option>
-                    <option value="data">Data & Basis Data</option>
                     <option value="desain">UI/UX & Desain</option>
+                    <option value="database">Data & Basis Data</option>
                 </select>
-                <select name="metode" class="form-input">
+                <select id="metode-filter" class="form-input">
                     <option value="">Semua Sistem Kerja</option>
                     <option value="wfo">WFO (On-site)</option>
                     <option value="hybrid">Hybrid</option>
                     <option value="wfh">Remote (WFH)</option>
                 </select>
-                <button type="submit" class="btn-utama">Cari</button>
+                <button type="button" id="btn-reset" class="btn-sekunder btn-sm" style="display: none;">Reset</button>
             </form>
         </div>
 
-        <!-- List kartu memanjang ke samping -->
-        <div class="list-lowongan">
+        <!-- LAYOUT 2 KOLOM ALA LINKEDIN JOBS -->
+        <div class="split-layout">
             
-            <!-- Card 1 -->
-            <div class="card-item">
-                <div class="logo-instansi">PT</div>
-                <div class="detail-pekerjaan">
-                    <h3><a href="detail.html?id=1">Fullstack Web Developer</a></h3>
-                    <span class="nama-kantor">PT Solusi Teknologi Terpadu</span>
-                    <p>Membantu pembuatan modul aplikasi internal, integrasi API, dan maintenance database MySQL.</p>
-                    <div class="tags-wrapper">
-                        <span class="badge-tag">📍 Cilacap (Hybrid)</span>
-                        <span class="badge-tag">⏱️ 6 Bulan</span>
-                        <span class="badge-tag">Software</span>
+            <!-- SISI KIRI: DAFTAR KARTU LOWONGAN -->
+            <div class="jobs-sidebar" id="daftar-lowongan">
+                <div id="pesan-kosong" style="display: none; padding: 25px; text-align: center; color: var(--teks-pudar);">
+                    Lowongan tidak ditemukan. Coba filter lain.
+                </div>
+
+                <!-- Kartu 1 -->
+                <div class="job-card-item active" 
+                     data-id="1"
+                     data-kategori="software" 
+                     data-metode="hybrid"
+                     data-title="Fullstack Web Developer Intern"
+                     data-company="PT Solusi Teknologi Terpadu"
+                     data-location="Cilacap, Jawa Tengah (Hybrid)"
+                     data-duration="6 Bulan (Semester Gasal)"
+                     data-deadline="15 Oktober 2026"
+                     data-status="Buka"
+                     data-desc="Mahasiswa akan berkolaborasi dengan tim software engineering dalam mengembangkan modul sistem informasi, membuat REST API, integrasi frontend-backend, dan optimasi query database MySQL.">
+                    <div class="card-logo">PT</div>
+                    <div class="card-info">
+                        <h4 class="job-title-link">Fullstack Web Developer</h4>
+                        <p class="company-text">PT Solusi Teknologi Terpadu</p>
+                        <span class="location-text">📍 Cilacap (Hybrid)</span>
+                        <div class="tags-row">
+                            <span class="badge-tag">Software</span>
+                            <span class="badge-status open">Pendaftaran Buka</span>
+                        </div>
                     </div>
                 </div>
-                <div class="side-kanan">
-                    <span class="status buka">Buka</span>
-                    <small>Batas: 15 Okt 2026</small>
-                    <a href="detail.html?id=1" class="btn-utama btn-sm">Lihat Detail</a>
+
+                <!-- Kartu 2 -->
+                <div class="job-card-item" 
+                     data-id="2"
+                     data-kategori="jaringan" 
+                     data-metode="wfo"
+                     data-title="Network & System Administrator Intern"
+                     data-company="Dinas Komunikasi dan Informatika"
+                     data-location="Cilacap, Jawa Tengah (WFO)"
+                     data-duration="6 Bulan"
+                     data-deadline="20 Oktober 2026"
+                     data-status="Buka"
+                     data-desc="Mendukung tim IT infrastructure dalam perawatan kabel jaringan LAN, konfigurasi routing MikroTik/Cisco, maintenance server Debian/Ubuntu, dan troubleshooting kendala jaringan operasional.">
+                    <div class="card-logo">DK</div>
+                    <div class="card-info">
+                        <h4 class="job-title-link">Network & System Administrator</h4>
+                        <p class="company-text">Dinas Komunikasi dan Informatika</p>
+                        <span class="location-text">📍 Cilacap (WFO)</span>
+                        <div class="tags-row">
+                            <span class="badge-tag">Jaringan</span>
+                            <span class="badge-status open">Pendaftaran Buka</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="job-card-item" 
+                     data-id="3"
+                     data-kategori="desain" 
+                     data-metode="wfh"
+                     data-title="UI/UX Designer & Frontend Support"
+                     data-company="Studio Kreasi Digital"
+                     data-location="Remote (WFH)"
+                     data-duration="3 Bulan"
+                     data-deadline="30 September 2026"
+                     data-status="Segera Tutup"
+                     data-desc="Fokus membuat wireframing, prototype high-fidelity pada Figma, user testing, serta berkoordinasi langsung dengan developer untuk proses slicing ke HTML/CSS dasar.">
+                    <div class="card-logo">SK</div>
+                    <div class="card-info">
+                        <h4 class="job-title-link">UI/UX Designer & Frontend</h4>
+                        <p class="company-text">Studio Kreasi Digital</p>
+                        <span class="location-text">📍 Remote (WFH)</span>
+                        <div class="tags-row">
+                            <span class="badge-tag">Desain</span>
+                            <span class="badge-status warning">Segera Tutup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu 4 -->
+                <div class="job-card-item" 
+                     data-id="4"
+                     data-kategori="database" 
+                     data-metode="wfo"
+                     data-title="Database Staff Intern"
+                     data-company="BPR Syariah Mitra Mandiri"
+                     data-location="Purwokerto, Jawa Tengah (WFO)"
+                     data-duration="6 Bulan"
+                     data-deadline="10 September 2026"
+                     data-status="Tutup"
+                     data-desc="Membantu staf data center dalam pemantauan backup berkala database nasabah, verifikasi integritas data transaksi, serta membantu optimasi stored procedure MySQL.">
+                    <div class="card-logo">BP</div>
+                    <div class="card-info">
+                        <h4 class="job-title-link">Database Staff Intern</h4>
+                        <p class="company-text">BPR Syariah Mitra Mandiri</p>
+                        <span class="location-text">📍 Purwokerto (WFO)</span>
+                        <div class="tags-row">
+                            <span class="badge-tag">Database</span>
+                            <span class="badge-status closed">Ditutup</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SISI KANAN: PREVIEW DETAIL STICKY ALA LINKEDIN -->
+            <div class="job-preview-panel">
+                <div class="preview-box">
+                    <div class="preview-header">
+                        <div class="preview-logo-title">
+                            <div class="large-logo" id="view-logo">PT</div>
+                            <div>
+                                <h3 id="view-title">Fullstack Web Developer Intern</h3>
+                                <p id="view-company" class="preview-company">PT Solusi Teknologi Terpadu</p>
+                                <span id="view-location" class="preview-meta">📍 Cilacap, Jawa Tengah (Hybrid)</span>
+                            </div>
+                        </div>
+                        <div class="preview-actions">
+                            <a href="detail.html?id=1" id="view-detail-btn" class="btn-utama">Lihat Detail &rarr;</a>
+                            <span id="view-status" class="badge-status open">Pendaftaran Buka</span>
+                        </div>
+                    </div>
+
+                    <hr class="preview-divider">
+
+                    <div class="preview-body">
+                        <h4>Rincian Lowongan</h4>
+                        <div class="quick-info-grid">
+                            <div><strong>Durasi Magang:</strong> <span id="view-duration">6 Bulan</span></div>
+                            <div><strong>Batas Pendaftaran:</strong> <span id="view-deadline">15 Oktober 2026</span></div>
+                        </div>
+
+                        <h4>Deskripsi Pekerjaan</h4>
+                        <p id="view-desc">
+                            Mahasiswa akan berkolaborasi dengan tim software engineering dalam mengembangkan modul sistem informasi, membuat REST API, integrasi frontend-backend, dan optimasi query database MySQL.
+                        </p>
+
+                        <h4>Persyaratan Umum</h4>
+                        <ul>
+                            <li>Mahasiswa aktif tingkat akhir TRPL / JKB Politeknik Negeri Cilacap.</li>
+                            <li>Memahami alur kerja Git & GitHub.</li>
+                            <li>Mampu bekerja sama dalam tim dan komunikatif.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="card-item">
-                <div class="logo-instansi">DK</div>
-                <div class="detail-pekerjaan">
-                    <h3><a href="detail.html?id=2">Network & System Administrator</a></h3>
-                    <span class="nama-kantor">Dinas Komunikasi dan Informatika</span>
-                    <p>Konfigurasi router Mikrotik/Cisco, maintenance kabel LAN kantor, dan monitoring server.</p>
-                    <div class="tags-wrapper">
-                        <span class="badge-tag">📍 Cilacap (WFO)</span>
-                        <span class="badge-tag">⏱️ 6 Bulan</span>
-                        <span class="badge-tag">Jaringan</span>
-                    </div>
-                </div>
-                <div class="side-kanan">
-                    <span class="status buka">Buka</span>
-                    <small>Batas: 20 Okt 2026</small>
-                    <a href="detail.html?id=2" class="btn-utama btn-sm">Lihat Detail</a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card-item">
-                <div class="logo-instansi">SK</div>
-                <div class="detail-pekerjaan">
-                    <h3><a href="detail.html?id=3">UI/UX Designer & Frontend Support</a></h3>
-                    <span class="nama-kantor">Studio Kreasi Digital</span>
-                    <p>Bikin mockup antarmuka web di Figma, perancangan user journey, dan slicing HTML/CSS dasar.</p>
-                    <div class="tags-wrapper">
-                        <span class="badge-tag">📍 Remote (WFH)</span>
-                        <span class="badge-tag">⏱️ 3 Bulan</span>
-                        <span class="badge-tag">Desain</span>
-                    </div>
-                </div>
-                <div class="side-kanan">
-                    <span class="status segera">Segera Tutup</span>
-                    <small>Batas: 30 Sep 2026</small>
-                    <a href="detail.html?id=3" class="btn-utama btn-sm">Lihat Detail</a>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="card-item">
-                <div class="logo-instansi">BP</div>
-                <div class="detail-pekerjaan">
-                    <h3><a href="detail.html?id=4">Database Staff Intern</a></h3>
-                    <span class="nama-kantor">BPR Syariah Mitra Mandiri</span>
-                    <p>Support backup database nasabah berkala, optimasi query SQL, dan susun log data transaksi.</p>
-                    <div class="tags-wrapper">
-                        <span class="badge-tag">📍 Purwokerto (WFO)</span>
-                        <span class="badge-tag">⏱️ 6 Bulan</span>
-                        <span class="badge-tag">Database</span>
-                    </div>
-                </div>
-                <div class="side-kanan">
-                    <span class="status tutup">Tutup</span>
-                    <small>Batas: 10 Sep 2026</small>
-                    <a href="detail.html?id=4" class="btn-sekunder btn-sm btn-mati">Lihat Detail</a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Nomor halaman -->
-        <div class="pagination">
-            <a href="#" class="page-link disabled">&laquo;</a>
-            <a href="#" class="page-link active">1</a>
-            <a href="#" class="page-link">2</a>
-            <a href="#" class="page-link">3</a>
-            <a href="#" class="page-link">&raquo;</a>
         </div>
 
     </div>
 </main>
 
-<!-- Footer -->
+<!-- FOOTER UTAMA PERSIS SEPERTI DESAIN -->
 <footer id="footer-utama">
-    <div class="container">
-        <p>&copy; 2026 SIMAG-JKB. All rights reserved.</p>
+    <div class="container footer-content">
+        <!-- Kolom 1: Brand & Deskripsi -->
+        <div class="footer-col brand-col">
+            <h2 class="footer-logo">SIMAG-JKB</h2>
+            <p>Platform direktori magang terpusat untuk mahasiswa Jurusan Komputer dan Bisnis Politeknik Negeri Cilacap. Transparan, cepat, dan sesuai kompetensi.</p>
+        </div>
+
+        <!-- Kolom 2: Tautan Cepat -->
+        <div class="footer-col links-col">
+            <h3 class="footer-heading">Tautan Cepat</h3>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog Magang</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- Kolom 3: Hubungi Kami -->
+        <div class="footer-col contact-col">
+            <h3 class="footer-heading">Hubungi Kami</h3>
+            <p>📍 Jl. Dr. Soetomo No.1, Sidakaya, Cilacap</p>
+            <p>✉️ admin.simag@pnc.ac.id</p>
+        </div>
+    </div>
+
+    <!-- Bar Copyright Bawah -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2026 Kelompok 2 TRPL 2B - Politeknik Negeri Cilacap.</p>
+        </div>
     </div>
 </footer>
+
+<script>
+    // 1. Script Live Filter
+    const inputCari = document.getElementById('cari-input');
+    const selectDivisi = document.getElementById('divisi-filter');
+    const selectMetode = document.getElementById('metode-filter');
+    const btnReset = document.getElementById('btn-reset');
+    const jobCards = document.querySelectorAll('.job-card-item');
+    const pesanKosong = document.getElementById('pesan-kosong');
+
+    function filterJobs() {
+        const cari = inputCari.value.toLowerCase().trim();
+        const divisi = selectDivisi.value;
+        const metode = selectMetode.value;
+
+        btnReset.style.display = (cari || divisi || metode) ? 'inline-block' : 'none';
+
+        let visibleCount = 0;
+        jobCards.forEach(card => {
+            const title = card.getAttribute('data-title').toLowerCase();
+            const company = card.getAttribute('data-company').toLowerCase();
+            const cardDivisi = card.getAttribute('data-kategori');
+            const cardMetode = card.getAttribute('data-metode');
+
+            const matchText = title.includes(cari) || company.includes(cari);
+            const matchDivisi = !divisi || cardDivisi === divisi;
+            const matchMetode = !metode || cardMetode === metode;
+
+            if (matchText && matchDivisi && matchMetode) {
+                card.style.display = 'flex';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        pesanKosong.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    inputCari.addEventListener('input', filterJobs);
+    selectDivisi.addEventListener('change', filterJobs);
+    selectMetode.addEventListener('change', filterJobs);
+    btnReset.addEventListener('click', () => {
+        inputCari.value = '';
+        selectDivisi.value = '';
+        selectMetode.value = '';
+        filterJobs();
+    });
+
+    // 2. Script Ganti Preview Kanan saat Kartu Diklik
+    const viewLogo = document.getElementById('view-logo');
+    const viewTitle = document.getElementById('view-title');
+    const viewCompany = document.getElementById('view-company');
+    const viewLocation = document.getElementById('view-location');
+    const viewDuration = document.getElementById('view-duration');
+    const viewDeadline = document.getElementById('view-deadline');
+    const viewDesc = document.getElementById('view-desc');
+    const viewBtn = document.getElementById('view-detail-btn');
+    const viewStatus = document.getElementById('view-status');
+
+    jobCards.forEach(card => {
+        card.addEventListener('click', function() {
+            jobCards.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+
+            const id = this.getAttribute('data-id');
+            const logoText = this.querySelector('.card-logo').textContent;
+            const title = this.getAttribute('data-title');
+            const company = this.getAttribute('data-company');
+            const loc = this.getAttribute('data-location');
+            const duration = this.getAttribute('data-duration');
+            const deadline = this.getAttribute('data-deadline');
+            const desc = this.getAttribute('data-desc');
+            const status = this.getAttribute('data-status');
+
+            viewLogo.textContent = logoText;
+            viewTitle.textContent = title;
+            viewCompany.textContent = company;
+            viewLocation.textContent = `📍 ${loc}`;
+            viewDuration.textContent = duration;
+            viewDeadline.textContent = deadline;
+            viewDesc.textContent = desc;
+            viewBtn.href = `detail.html?id=${id}`;
+
+            viewStatus.textContent = status === 'Buka' ? 'Pendaftaran Buka' : (status === 'Segera Tutup' ? 'Segera Tutup' : 'Ditutup');
+            viewStatus.className = 'badge-status ' + (status === 'Buka' ? 'open' : (status === 'Segera Tutup' ? 'warning' : 'closed'));
+        });
+    });
+</script>
 
 </body>
 </html>
