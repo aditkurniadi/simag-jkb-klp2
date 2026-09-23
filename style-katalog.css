@@ -1,289 +1,263 @@
-/* ======================================================== */
-/* STYLE SPESIFIK HALAMAN KATALOG LOWONGAN (style-katalog.css) */
-/* ======================================================== */
-
-#katalog-section {
-    padding: 50px 0 70px 0;
+/* Styling konten katalog lowongan */
+.main-katalog {
+    padding: 40px 0 60px;
 }
 
-/* Judul & Subtitle */
-.katalog-head {
-    margin-bottom: 30px;
-}
-
-.katalog-head .section-title {
-    margin-bottom: 10px;
-    font-size: 2.3rem;
-}
-
-.katalog-head .section-subtitle {
-    color: var(--teks-pudar);
-    font-size: 1.05rem;
+.katalog-top {
     margin-bottom: 25px;
 }
 
-/* Filter & Pencarian Bar Memanjang */
-.filter-bar {
-    display: flex;
-    gap: 12px;
+.katalog-top .section-title {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+}
+
+.katalog-top .sub-text {
+    color: var(--teks-pudar);
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+}
+
+/* Box form filter */
+.box-filter {
     background-color: var(--bg-putih);
-    padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    gap: 10px;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.input-search {
+.form-input {
+    padding: 10px 14px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.92rem;
+    color: var(--teks-utama);
+    background-color: #fff;
+    outline: none;
+}
+
+.search-input {
     flex: 2;
-    min-width: 240px;
-    padding: 12px 16px;
-    border: 1.5px solid #DEE2E6;
-    border-radius: 8px;
-    font-family: var(--font-utama);
-    font-size: 0.95rem;
-    color: var(--teks-utama);
-    outline: none;
-    transition: border-color 0.2s ease;
+    min-width: 220px;
 }
 
-.select-filter {
+.box-filter select {
     flex: 1;
-    min-width: 170px;
-    padding: 12px 14px;
-    border: 1.5px solid #DEE2E6;
-    border-radius: 8px;
-    font-family: var(--font-utama);
-    font-size: 0.95rem;
-    background-color: var(--bg-putih);
-    color: var(--teks-utama);
-    outline: none;
+    min-width: 150px;
     cursor: pointer;
-    transition: border-color 0.2s ease;
 }
 
-.input-search:focus,
-.select-filter:focus {
+.form-input:focus {
     border-color: var(--biru-trpl);
 }
 
-.filter-bar .btn-utama {
+.box-filter .btn-utama {
     border: none;
     cursor: pointer;
+    font-family: inherit;
     font-size: 0.95rem;
-    font-family: var(--font-utama);
 }
 
-/* Daftar Kartu Memanjang Horizontal */
-.katalog-list-horizontal {
+/* Container list kartu */
+.list-lowongan {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-top: 25px;
+    gap: 16px;
+    margin-top: 20px;
 }
 
-.job-card-row {
+/* Kartu horizontal */
+.card-item {
+    background: var(--bg-putih);
+    border-radius: 10px;
+    padding: 20px;
     display: flex;
     align-items: center;
-    background-color: var(--bg-putih);
-    border-radius: 12px;
-    padding: 24px;
-    gap: 22px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    gap: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #edf2f7;
+    transition: 0.25s ease;
 }
 
-.job-card-row:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.09);
+.card-item:hover {
+    transform: translateY(-3px);
     border-color: var(--biru-trpl);
+    box-shadow: 0 8px 16px rgba(0, 86, 179, 0.08);
 }
 
-/* Bagian Kiri: Kotak Logo */
-.card-logo .logo-box {
-    width: 64px;
-    height: 64px;
-    background-color: #EBF3FC;
+/* Kolom logo kotak */
+.logo-instansi {
+    width: 58px;
+    height: 58px;
+    background-color: #eaf2fb;
     color: var(--biru-trpl);
-    font-weight: 800;
-    font-size: 1.3rem;
-    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #D0E3F9;
+    flex-shrink: 0;
 }
 
-/* Bagian Tengah: Info Teks Lowongan */
-.card-body {
+/* Kolom info tengah */
+.detail-pekerjaan {
     flex: 1;
 }
 
-.card-body .job-title {
-    margin: 0 0 6px 0;
-    font-size: 1.25rem;
-    font-weight: 700;
+.detail-pekerjaan h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
 }
 
-.card-body .job-title a {
-    text-decoration: none;
+.detail-pekerjaan h3 a {
     color: var(--biru-trpl);
-    transition: color 0.2s ease;
+    text-decoration: none;
 }
 
-.card-body .job-title a:hover {
+.detail-pekerjaan h3 a:hover {
     color: var(--biru-trpl-gelap);
 }
 
-.card-body .company-name {
-    margin: 0 0 10px 0;
+.detail-pekerjaan .nama-kantor {
+    display: block;
     color: var(--teks-pudar);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    margin-bottom: 8px;
 }
 
-.card-body .job-desc {
-    margin: 0 0 14px 0;
+.detail-pekerjaan p {
     color: var(--teks-utama);
-    font-size: 0.92rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    margin: 0 0 12px 0;
+    line-height: 1.45;
 }
 
-.card-body .job-meta-tags {
+.tags-wrapper {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 
-.card-body .meta-tag {
+.badge-tag {
     background-color: var(--bg-dasar);
     color: var(--teks-pudar);
-    font-size: 0.82rem;
-    font-weight: 600;
-    padding: 5px 12px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
     border-radius: 6px;
-    border: 1px solid #DEE2E6;
+    border: 1px solid #e2e8f0;
 }
 
-/* Bagian Kanan: Aksi & Status */
-.card-action {
+/* Kolom aksi kanan */
+.side-kanan {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
-    min-width: 150px;
+    gap: 8px;
+    min-width: 135px;
+    flex-shrink: 0;
 }
 
 .btn-sm {
-    padding: 8px 18px !important;
-    font-size: 0.88rem !important;
+    padding: 8px 16px;
+    font-size: 0.85rem;
 }
 
-.btn-disabled {
-    border-color: #CED4DA !important;
-    color: var(--teks-pudar) !important;
+.btn-mati {
+    border-color: #dee2e6;
+    color: var(--teks-pudar);
     pointer-events: none;
-    background-color: var(--bg-dasar) !important;
+    background-color: #f1f3f5;
 }
 
-.status-badge {
-    font-size: 0.78rem;
-    padding: 5px 10px;
-    border-radius: 6px;
+.status {
+    font-size: 0.75rem;
     font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 5px;
 }
 
-.badge-open {
-    background-color: #D1E7DD;
-    color: #0F5132;
+.status.buka {
+    background-color: #d1e7dd;
+    color: #0f5132;
 }
 
-.badge-closing {
-    background-color: #FFF3CD;
-    color: #664D03;
-    border: 1px solid var(--kuning-jkb);
+.status.segera {
+    background-color: #fff3cd;
+    color: #856404;
 }
 
-.badge-closed {
-    background-color: #E2E3E5;
+.status.tutup {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+.side-kanan small {
     color: var(--teks-pudar);
-}
-
-.deadline-text {
-    font-size: 0.8rem;
-    color: var(--teks-pudar);
+    font-size: 0.78rem;
 }
 
 /* Pagination */
-.katalog-pagination {
+.pagination {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    gap: 6px;
+    margin-top: 35px;
 }
 
-.pagination-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 8px;
-}
-
-.pagination-list .page-item a {
-    display: block;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 1.5px solid #CED4DA;
-    background-color: var(--bg-putih);
+.page-link {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background: #fff;
     color: var(--teks-utama);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
+    font-size: 0.88rem;
 }
 
-.pagination-list .page-item:not(.active):not(.disabled) a:hover {
+.page-link:hover:not(.active):not(.disabled) {
     border-color: var(--biru-trpl);
     color: var(--biru-trpl);
 }
 
-.pagination-list .page-item.active a {
+.page-link.active {
     background-color: var(--biru-trpl);
-    color: #FFFFFF;
     border-color: var(--biru-trpl);
+    color: #fff;
 }
 
-.pagination-list .page-item.disabled a {
-    color: #ADB5BD;
+.page-link.disabled {
+    color: #ced4da;
     background-color: var(--bg-dasar);
-    border-color: #DEE2E6;
     pointer-events: none;
 }
 
-/* Responsif Layar HP (Mobile) */
+/* Responsif HP */
 @media (max-width: 768px) {
-    .filter-bar {
+    .box-filter {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .filter-bar .btn-utama {
-        text-align: center;
-    }
-
-    .job-card-row {
+    .card-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
     }
 
-    .card-action {
+    .side-kanan {
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-top: 1px solid #E9ECEF;
-        padding-top: 15px;
+        border-top: 1px solid #edf2f7;
+        padding-top: 12px;
     }
 }
