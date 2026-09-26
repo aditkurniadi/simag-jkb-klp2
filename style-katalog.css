@@ -151,10 +151,19 @@
     font-weight: 600;
 }
 
-.card-info .location-text {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--teks-pudar);
+/* Samakan jenis font, ukuran, dan ketebalannya */
+.card-info .location-text,
+.card-info .work-type {
+    font-family: var(--font-utama, 'Segoe UI', system-ui, -apple-system, sans-serif);
+    font-size: 0.9rem;
+    color: var(--teks-pudar); /* Menggunakan warna abu-abu standar */
+    font-weight: 500;         /* Ketebalan pas, tidak kurus dan tidak kaku */
+    line-height: 1.35;
+    margin: 0;
+}
+
+/* Beri sedikit jarak bawah pada tipe kerja sebelum baris tag */
+.card-info .work-type {
     margin-bottom: 8px;
 }
 
