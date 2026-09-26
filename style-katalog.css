@@ -1,10 +1,28 @@
 /* Layout Spacing */
 .main-katalog {
     padding: 30px 0 60px 0;
+    /* Base background asli Adit */
+    background-color: var(--bg-dasar);
+    /* Pendaran halus biru TRPL di kiri atas & kuning JKB di kanan atas */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 86, 179, 0.06) 0px, transparent 45%),
+        radial-gradient(at 100% 0%, rgba(255, 193, 7, 0.05) 0px, transparent 40%);
+    min-height: calc(100vh - 150px);
 }
 
 .katalog-top {
-    margin-bottom: 20px;
+    background-color: var(--biru-trpl); /* Biru TRPL solid */
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.15);
+}
+
+/* Biar form input di dalamnya menonjol putih */
+.katalog-top .box-filter {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Filter Memanjang */
