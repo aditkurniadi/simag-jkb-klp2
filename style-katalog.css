@@ -123,8 +123,10 @@
     height: 48px;
     background: #eaf2fb;
     color: var(--biru-trpl);
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 800;
+    font-size: 1.05rem;
+    font-family: 'Consolas', 'Courier New', monospace;  
+    letter-spacing: 0.5px;
     border-radius: 8px;
     display: flex;
     align-items: center;
