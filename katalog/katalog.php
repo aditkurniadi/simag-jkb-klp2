@@ -1,5 +1,6 @@
 <?php
-include 'database/koneksi.php';
+include '../database/koneksi.php';
+/** @var mysqli $koneksi */
 
 // Ambil input filter pencarian jika ada
 $keyword = isset($_GET['keyword']) ? mysqli_real_escape_string($koneksi, trim($_GET['keyword'])) : '';
@@ -37,7 +38,7 @@ $firstJob = !empty($jobs) ? $jobs[0] : null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katalog Magang - SIMAG JKB</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style-katalog.css">
 </head>
 <body>
